@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Relatórios</title>
+  <style>
+    html {
+      font-family: Tahoma;
+      font-size: 18px;
+    }
+
+    body {
+      background-color: white;
+      margin: 25px;
+    }
+
+    .container-header header {
+      border: double;
+      background-color: lightgray;
+      padding: 15px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container-header header a {
+      text-decoration: none;
+      color: black;
+      align-items: center;
+      justify-content: space-between;
+      margin: auto 5% auto 5%;
+      padding: 0px;
+    }
+
+    .titulo {
+      display: flex;
+      justify-content: center;
+      color: darkslategray;
+      text-decoration: none;
+      font-size: 75%;
+    }
+
+    .container-tabela {
+      display: flex;
+      justify-content: center;
+    }
+
+    table {
+      background-color: lightgray;
+      border: double darkslategray;
+      padding: 10px;
+      border-radius: 10px;
+      width: 90%;
+    }
+
+    th,td {
+      border: 1px double black;
+      border-collapse: collapse;
+    }
+
+
+    thead,
+    tfoot {
+      background-color: darkslategrey;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .container-tabela caption{
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-header">
+    <header>
+      <a href="home.html"> Home </a>
+      <a href="cadastro.html">Cadastro </a>
+      <a href="relatorio.html">Relatório </a>
+      <a href="perfil.html">Perfil</a>
+      <a href="sair.html">Sair </a>
+    </header>
+  </div>
+
+  <div class="titulo">
+    <h1>Lista de pessoas cadastradas:</h1>
+  </div>
+  <div class="container-tabela">
+    <table>
+      <caption>Relatório</caption>
+
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Usuário</th>
+          <th>E-mail</th>
+          <th>Telefone</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Acsa Garcia</td>
+          <td>acsa</td>
+          <td>acsa@web.aluno.ufop.br</td>
+          <td>(31)97154-5847</td>
+        </tr>
+        <tr>
+          <td>Cora Coralina</td>
+          <td>cora</td>
+          <td>cora@web.aluno.ufop.br</td>
+          <td>(31)99896-6741</td>
+        </tr>
+        <tr>
+          <td>Ezra Miller</td>
+          <td>ezra</td>
+          <td>ezra@web.aluno.ufop.br</td>
+          <td>(31)98741-5855</td>
+        </tr>
+        <tr>
+          <td>Raoni Vidal</td>
+          <td>raoni</td>
+          <td>raoni@web.aluno.ufop.br</td>
+          <td>(31)98723-3325</td>
+        </tr>
+        <tr>
+          <td>Suri Lima</td>
+          <td>suri</td>
+          <td>suri@web.aluno.ufop.br</td>
+          <td>(31)97587-6699</td>
+        </tr>
+        <tr>
+          <td>Yank Bicalho</td>
+          <td>yank</td>
+          <td>yank@web.aluno.ufop.br</td>
+          <td>(31)98885-6663</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4">Alunos cadastrados</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</body>
+
+</html>

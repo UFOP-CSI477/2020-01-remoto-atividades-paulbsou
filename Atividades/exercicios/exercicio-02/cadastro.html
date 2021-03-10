@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro </title>
+  <style>
+    html {
+      font-family: Tahoma;
+      font-size: 18px;
+    }
+
+    body {
+      background-color: white;
+      margin: 25px;
+    }
+
+    .container header {
+      border: double;
+      background-color: lightgray;
+      padding: 15px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container header a {
+      text-decoration: none;
+      color: black;
+      align-items: center;
+      justify-content: space-between;
+      margin: auto 5% auto 5%;
+      padding: 0px;
+    }
+
+    .titulo {
+      display: flex;
+      justify-content: center;
+      color: darkslategray;
+      text-decoration: none;
+      font-size: 75%;
+    }
+
+    .container-formulario {
+      display: flex;
+      padding: 30px;
+      margin-left: 25%;
+      margin-right: auto;
+    }
+
+    .buttons {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      justify-content: center;
+
+    }
+
+    .buttons button {
+      font-size: 12pt;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bold;
+      margin-left: 20px;
+      border: double darkslategray;
+      border-radius: 15px;
+      width: 30%;
+      padding: 3%;
+      background-color: lightgray;
+    }
+
+    input[type="text"]{
+      width: 100%;
+      padding: 10px;
+      border: 1px solid darkslategrey
+    }
+    input[type="tel"]{
+      width: 100%;
+      padding: 10px;
+      border: 1px solid darkslategrey
+    }
+    input[type="email"]{
+      width: 100%;
+      padding: 10px;
+      border: 1px solid darkslategrey
+    }
+    input[type="date"]{
+      width: 100%;
+      padding: 10px;
+      border: 1px solid darkslategrey
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <a href="home.html"> Home </a>
+      <a href="cadastro.html">Cadastro </a>
+      <a href="relatorio.html">Relatório </a>
+      <a href="perfil.html">Perfil</a>
+      <a href="sair.html">Sair </a>
+    </header>
+  </div>
+
+  <div class="titulo">
+    <h1>Cadastro de Pessoas:</h1>
+  </div>
+
+  <div class="container-formulario">
+    <form method="post" action="validar.html">
+      <div>
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" placeholder="Nome completo">
+      </div>
+
+      <div>
+        <label for="endereco">Endereço:</label>
+        <input type="text" name="endereco" id="endereco" placeholder="Endereço completo">
+      </div>
+
+      <div>
+        <p><em>Dados pessoais:</em></p>
+      </div>
+
+      <div>
+        <div>
+          <label for="rg">RG:</label>
+          <input type="text" name="rg" id="rg" placeholder="  -  .   .   " maxlength="10">
+
+          <label for="cpf">CPF:</label>
+          <input type="text" name="cpf" id="cpf" placeholder="   .   .   -  " maxlength="11">
+        </div>
+
+        <div>
+          <label for="nascimento">Data de nascimento: </label>
+          <input type="date" name="nascimento" id="nascimento">
+        </div>
+
+        <div>
+          <label for="nacionalidade">Nacionalidade:</label>
+          <input type="text" name="nacionalidade" id="nacionalidade" placeholder="País de origem">
+        </div>
+      </div>
+
+      <div>
+        <label for="estadocivil">Estado Civil:</label>
+
+        <div>
+          <input type="radio" name="estadocivil" id="solteiro">Solteiro
+
+          <input type="radio" name="estadocivil" id="casado">Casado
+
+          <input type="radio" name="estadocivil" id="divorciado">Divorciado
+
+          <input type="radio" name="estadocivil" id="viuvo">Viúvo
+
+          <input type="radio" name="estadocivil" id="semresposta">Prefiro não informar.
+        </div>
+      </div>
+
+      <div>
+        <p><em>Dados para contato:</em></p>
+      </div>
+
+      <div>
+        <div>
+          <label for="telefone">Telefone</label>
+          <input type="tel" name="telefone" id="telefone" placeholder="(  )" maxlength="11">
+        </div>
+
+        <div>
+          <label for="email">E-mail:</label>
+          <input type="email" name="email" id="email" placeholder="E-mail">
+        </div>
+      </div>
+      <br>
+      <div class="buttons">
+        <button type="submit">Cadastrar</button>
+        <button type="reset"> Limpar</button>
+      </div>
+  </div>
+  </form>
+</body>
+
+</html>
