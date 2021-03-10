@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulários</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+
+    <div class="text-center" style="background-color: gray; padding: 5px;"><h1>Inserção de Dados via Formulário</h1></div>
+
+    <script>
+      function Pessoa(nome, idade, endereco){
+        this.nome = nome;
+        this.idade = idade;
+        this.endereco = endereco;
+      }
+
+      function inserir(){
+        const nome = document.formDados.nome.value;
+        const idade = document.formDados.idade.value;
+        const endereco = document.formDados.endereco.value;
+        const pessoa = new Pessoa (nome, idade, endereco);
+
+        console.log(nome,idade, endereco);
+        dadospessoa = pessoa;
+
+        window.alert("Dados inseridos! Clique em CARREGAR DADOS para verificar!")
+      }
+
+
+      function carregarDados(){
+        document.getElementById('nome').innerHTML = dadospessoa.nome;
+        document.getElementById('idade').innerHTML = dadospessoa.idade;
+        document.getElementById('endereco').innerHTML = dadospessoa.endereco;
+      }
+
+    </script>
+</head>
+<body>
+    <form action="post" name="formDados">
+      <div class="form-group" style="padding: 5px; margin: 15px 45px;" >
+
+      <div id="nomepessoa" >
+        <label for="nome">Nome completo: </label>
+        <input type="text" name="nome" class="form-control" placeholder="Informe o nome completo">
+      </div>
+
+      <div id = "idadepessoa">
+        <label for="idade"> Idade: </label>
+        <input type="text" name="idade" class="form-control" placeholder="Informe a idade">
+      </div>
+
+      <div id= "enderecopessoa">
+        <label for="endereco">Endereço Completo: </label>
+        <input type="text" name="endereco"  class="form-control" placeholder="Informe o endereço completo">
+      </div>
+    </div>
+
+    <div class="text-center">
+      <input type="button" value="Inserir" class="btn btn-secondary btn-lg" onclick="inserir()">
+
+      <input type="button" value="Carregar Dados" class="btn btn-secondary btn-lg" onclick="carregarDados()">
+
+      <input type="reset" value="Limpar" class="btn btn-secondary btn-lg">
+    </div>
+    </form>
+    <br>
+    <div class="text-center" style="background-color: gray; padding: 10px;"><h2>Dados inseridos: </h2>
+    </div>
+
+    <div class="" style="padding: 5px; margin: 15px 45px;">
+      <label>Nome completo: </label>
+      <div id="nome"></div>
+      <label>Idade: </label>
+      <div id="idade"></div>
+      <label>Endereço completo: </label>
+      <div id="endereco"></div>
+    </div>
+</body>
+</html>
