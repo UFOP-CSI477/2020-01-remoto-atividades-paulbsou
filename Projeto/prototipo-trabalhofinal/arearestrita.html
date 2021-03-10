@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="br" dir="ltr">
+
+<head>
+    <title>JuStella Fotografia | Área Cliente</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 15%;
+            background-color: #000000;
+            font-family: 'Bodoni MT';
+            font-size: 18px;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        li a {
+            display: block;
+            color: rgb(255, 255, 255);
+            padding: 20px 20px;
+            text-decoration: none;
+        }
+
+        li a.active {
+            background-color: rgb(61, 59, 61);
+            color: white;
+        }
+
+        li a:hover:not(.active) {
+            background-color: rgb(61, 59, 61);
+            color: white;
+        }
+
+        
+        form {
+            border: 3px solid #f1f1f1;
+        }
+
+        /* Full-width inputs */
+        input[type=text],
+        input[type=password] {
+            width: 30%;
+            padding: 12px 20px;
+            margin: 20px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        /* Set a style for all buttons */
+        button {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            padding: 10px 18px;
+            margin: 8px 0;
+            border-radius: 20px;
+            cursor: pointer;
+            width: 20%;
+        }
+
+
+        /* Add padding to containers */
+        .container {
+            padding: 16px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <ul>
+        <center><img width="80%" src="imagens/LogoJuStella.png" alt="Logomarca JuStella"></center>
+        <li><a href="inicio.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="portfolio.html">Portfólio</a></li>
+        <li><a href="faleconosco.html">Fale Conosco</a></li>
+        <li><a class="active" href="arearestrita.html">Área restrita</a></li>
+
+
+    </ul>
+    <br><br>
+    <center>
+        <form action="/arearestrita.php" method="post">
+         
+            <div class="container">
+              <label for="usuario"><b>E-mail ou nome de Usuário</b></label><br>
+              <input type="text" placeholder="Usuario" name="usuario" required>
+                <br>
+              <label for="senha"><b>Senha</b></label><br>
+              <input type="password" placeholder="Senha" name="senha" required>
+              <br>
+            
+              <button type="submit">Login</button><br>
+              <span class="senha"> <a href="#">Esqueceu a senha?</a></span>
+            </div>
+          
+        </form>
+    </center>
+</body>
+
+</html>

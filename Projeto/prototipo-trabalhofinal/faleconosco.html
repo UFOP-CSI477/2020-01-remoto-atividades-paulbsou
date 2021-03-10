@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>JuStella Fotografia | Fale Conosco</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 15%;
+            background-color: #000000;
+            font-family: 'Bodoni MT';
+            font-size: 18px;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        li a {
+            display: block;
+            color: rgb(255, 255, 255);
+            padding: 20px 20px;
+            text-decoration: none;
+        }
+
+        li a.active {
+            background-color: rgb(61, 59, 61);
+            color: white;
+        }
+
+        li a:hover:not(.active) {
+            background-color: rgb(61, 59, 61);
+            color: white;
+        }
+
+        form {
+            border: 3px solid #f1f1f1;
+        }
+
+        /* Full-width inputs */
+        input[type=text],
+        input[type=password] {
+            width: 30%;
+            padding: 12px 20px;
+            margin: 20px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        /* Set a style for all buttons */
+        button {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            padding: 10px 18px;
+            margin: 8px 0;
+            border-radius: 20px;
+            cursor: pointer;
+            width: 20%;
+        }
+
+
+        /* Add padding to containers */
+        .container {
+            padding: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul>
+        <center><img width="80%" src="imagens/LogoJuStella.png" alt="Logomarca JuStella"></center>
+        <li><a href="inicio.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="portfolio.html">Portfólio</a></li>
+        <li><a class="active" href="faleconosco.html">Fale Conosco</a></li>
+        <li><a href="arearestrita.html">Área Restrita</a></li>
+    </ul>
+    <br><br>
+    <center>
+
+        <form action="/faleconosco.php" method="post">
+
+            <div class="container">
+                <div><label for="nome" id="labelNome"><b>Nome</b> </label><br>
+                    <input type="text" name="Nome" placeholder="Nome" id="nome"></div>
+
+
+                <label for="email" id="labelEmail"><b> E-mail:</b> </label><br>
+                <input type="text" name="email" placeholder="E-mail" id="email"><br>
+
+
+                <label for="cidade" id="labelCidade"> <b>Cidade:</b> </label><br>
+                    <input type="text" name="cidade" placeholder="Cidade" id="cidade"><br>
+
+                <!--<label>Opções:</label>
+                <select name="opcoes" id="opcoes">
+                    <option disabled selected value="0">Selecione</option>
+                    <option value="1">Retratos</option>
+                    <option value="2">Família</option>
+                    <option value="3">Gestante</option>
+                    <option value="4">Casais</option>
+                    <option value="5">Infantil</option>
+                </select>
+            -->
+
+                
+                    <style>
+                        input[name=mensagem] {
+                            height: 150px;
+                        }
+                    </style>
+                    <label for="mensagem" id="labelMensagem"> <b>Mensagem:</b> </label><br>
+                    <input type="text" name="mensagem" placeholder="Mensagem" id="mensagem">
+                
+            <br>
+            <!--<input type="reset" value="Limpar formulário">-->
+            <button type="submit">Enviar</button>
+
+        </form>
+
+
+
+
+        </form>
+    </center>
+</body>
+
+</html>
