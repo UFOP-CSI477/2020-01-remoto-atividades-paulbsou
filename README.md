@@ -2,11 +2,11 @@
 
 ## Atualize os seus dados:
 
-- Nome:
-- Matrícula:
-- Curso:
-- Semestre/Ano correntes:
-- Link para o seu GitHub:
+- Nome: Paula Fernanda Barros de Souza
+- Matrícula: 17.2.8307
+- Curso: Sistemas de Informação
+- Semestre/Ano correntes: 2020/01 - Período Letivo Remoto
+- Link para o seu GitHub: [https://github.com/paulbsou] (https://github.com/paulbsou)
 
 ## [Projeto final:](./Projeto/README.md) 
 
