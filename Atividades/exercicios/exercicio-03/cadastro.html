@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perfil do Usuário</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <div>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <a class="navbar-brand" href="#"><img src="img/web.png" alt="logo" style="width: 40px;"></a>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html"> Home </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="cadastro.html">Cadastro </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="relatorio.html">Relatório </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="perfil.html">Perfil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sair.html">Sair</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="jumbotron text-center" style="padding: 20px;">
+    <h1>Cadastro de Pessoas:</h1>
+    <div method="post" action="validar.html"></div>
+  </div>
+
+  <div class="container p-2 border-light" style="padding: 15px;">
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input type="text" name="nome" id="nome" placeholder="Nome completo" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="endereco">Endereço:</label>
+      <input type="text" name="endereco" id="endereco" placeholder="Endereço completo" class="form-control">
+    </div>
+
+    <p><em>Dados pessoais:</em></p>
+
+    <div class="form-row">
+      <div class="col">
+        <label for="rg">RG:</label>
+        <input type="text" name="rg" id="rg" placeholder="  -  .   .   " maxlength="10" class="form-control">
+      </div>
+
+      <div class="col">
+        <label for="cpf">CPF:</label>
+        <input type="text" name="cpf" id="cpf" placeholder="   .   .   -  " maxlength="11" class="form-control">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="nascimento">Data de nascimento: </label>
+      <input type="date" name="nascimento" id="nascimento" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="nacionalidade">Nacionalidade:</label>
+      <input type="text" name="nacionalidade" id="nacionalidade" placeholder="País de origem" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="estadocivil">Estado Civil:</label>
+      <div class="form-group form-check">
+        <input type="radio" name="estadocivil" id="solteiro" class="form-check-label"> Solteiro
+      </div>
+      <div class="form-group form-check"><input type="radio" name="estadocivil" id="casado" class="form-check-label">
+        Casado</div>
+      <div class="form-group form-check"><input type="radio" name="estadocivil" id="divorciado"
+          class="form-check-label"> Divorciado</div>
+      <div class="form-group form-check"><input type="radio" name="estadocivil" id="viuvo" class="form-check-label">
+        Viúvo</div>
+      <div class="form-group form-check"><input type="radio" name="estadocivil" id="semresposta"
+          class="form-check-label"> Prefiro não informar.</div>
+    </div>
+
+    <p><em>Dados para contato:</em></p>
+    <div class="form-group">
+      <label for="telefone">Telefone</label>
+      <input type="tel" name="telefone" id="telefone" placeholder="(  )" maxlength="11" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="email">E-mail:</label>
+      <input type="email" name="email" id="email" placeholder="E-mail" class="form-control">
+    </div>
+    
+    <div>
+      <input type="submit" class="btn btn-secondary btn-lg" value="Cadastrar">
+      <input type="reset" class="btn btn-danger btn-lg" value="Limpar">
+    </div>
+  </div>
+  </form>
+</body>
+</html>
