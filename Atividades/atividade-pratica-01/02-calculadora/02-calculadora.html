@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--teste-->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <script src="./02-calculadora.js"></script>
+    <link rel="stylesheet" href="./02-calculadora.css">
+
+</head>
+
+<body>
+  <div class="jumbotron text-center" style="padding: 30px;">
+    <h1>Calculadora</h1>
+  </div>
+
+<form name="calculadora">
+  <div class="container p-2 " id="calc"style="margin: 20px;">
+    <div class="row">
+      <div id="calc">
+      <table id="tabela">
+        <tr>
+          <td colspan="4">
+            <input type="text"  id="exibeTela" readonly></input>
+          </td>
+        </tr>
+
+        <tr>
+          <td><input type="button" id="botao" value="7" onclick="botoes(value)"></td>
+          <td><input type="button" id="botao" value="8" onclick="botoes(value)"></td>
+          <td><input type="button" id="botao" value="9" onclick="botoes(value)"></td>
+          <td><input type="button" id="botao" value="+" onclick="botoes(value)"></td>
+        </tr>
+
+        <tr>
+          <td><input type="button" id="botao" value="6" onclick="botoes(value)"></td>
+          <td><input type="button" id="botao" value="5" onclick="botoes(value)"></td>
+          <td><input type="button" id="botao" value="4" onclick="botoes(value)"></td>
+          <td><input type="button" id="botao" value="-" onclick="botoes(value)"></td>
+        </tr>
+
+        <tr>
+          <td><input type="button" id="botao" value="3" onclick="botoes(value)"></td>
+          <td><input type="button" id="botao" value="2" onclick="botoes(value)"></td>
+          <td><input type="button" id="botao" value="1" onclick="botoes(value)"></td>
+          <td><input type="button" id="botao" value="*" onclick="botoes(value)"></td>
+        </tr>
+
+        <tr>
+          <td><input type="button" id="botao" value="." onclick="botoes(value)"></td>
+          <td><input type="button" id="botao" value="0" onclick="botoes(value)"></td>
+          <td><input type="button" id="botao" value="=" onclick="botoes(value)"></td>
+          <td><input type="button" id="botao" value="/" onclick="botoes(value)"></td>
+        </tr>
+
+        <tr>
+          <td><input type="button" id="botao" value="(" onclick="botoes(value)"></td>
+          <td><input type="button" id="botao" value=")" onclick="botoes(value)"></td>
+          <td colspan="2"><input type="reset" id="botaoreset" value="C"></td>
+        </tr>
+      </table>
+      </div>
+    </div>
+    </div>
+  </div>
+</form>
+</body>
+
+</html>

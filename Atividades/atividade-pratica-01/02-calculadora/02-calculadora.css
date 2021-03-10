@@ -1,0 +1,32 @@
+#calc{
+  margin: auto;
+  font-size: 30px;
+}
+
+#calc #tabela{
+  background-color:white;
+}
+
+#calc #botao{
+  background-color: gray;
+  color: white;
+}
+
+#calc #botaoreset{
+  background-color: darkred;
+  color: white;
+}
+
+#calc tr {
+  width: 100%;
+  height:100%;
+}
+
+#calc td input {
+  width: 100%;
+  height:100%;
+}
+
+#calc td input#exibeTela {
+  text-align: right;
+}
