@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Competição de carrinhos de rolimã</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+  <script src="./04-consumo.js"></script>
+</head>
+
+<body>
+
+  <div class="jumbotron text-center" style="padding: 30px;">
+    <h1>Consumo de Combustível</h1>
+  </div>
+
+  <div class="container p-3 badge-secondary text-light">
+    <div class="form-group">
+      <div class="row">
+        <div class="col-6">
+          <label for="QtdCbt">Quantidade de combustível abastecido:</label>
+          <input type="number" name="QtdCbt" id="QtdCbt" value="" class="form-control"
+            placeholder="Quantidade de combustível abastecida. Ex: 45.2">
+        </div>
+
+        <div class="col-6">
+          <label for="QtdKM">Quilômetros rodados:</label>
+          <input type="number" name="QtdKM" id="QtdKM" class="form-control" value=""
+            placeholder="Quantidade de quilômetros rodados. Ex:720.3">
+        </div>
+        </div>
+    </div>
+
+        
+        <div class="text-center">
+          <input type="button" class="btn btn-lg btn-dark " value="Adicionar" id="Adicionar"
+            onclick="Adicionar()">
+        
+          <input type="button" class="btn btn-lg btn-dark " value="Finalizar" id="Finalizar"
+            onclick="Finalizar()">
+        </div>
+
+        
+
+        <div class="container p-3 text-center">
+          <table id="dadosTabela" class="table table-striped table-dark table-hover table-bordered">
+            <thead>
+              <tr>
+                <th>Quantidade de Combustivel</th>
+                <th>Quantidade de Km rodados</th>
+                <th>Desempenho em km/l</th>
+              </tr>
+            </thead>
+          </table>
+
+          <div class="container p-3 text-center">
+            <table id="tabelaresult" class="table table-striped table-dark table-hover table-bordered">
+              <thead>
+                <tr>
+                  <th>Qtd total de combustível utilizada:</th>
+                  <th>Quantidade total de Km rodados</th>
+                  <th>Média de consumo de combustível:</th>
+                  <th>Média de km rodados:</th>
+                  <th>Média de desempenho de Km/l</th>
+                </tr>
+              </thead>
+            </table>
+      
+
+        <div class="text-center">
+        <input type="button" class="btn btn-lg btn-dark " value="Reiniciar" id="Reiniciar"
+            onclick="Reiniciar()">
+        </div>
+      </div>
+      </form>
+</body>
+</html>
