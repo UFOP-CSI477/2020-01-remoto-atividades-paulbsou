@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Competição de carrinhos de rolimã</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+  <script src="./01-corrida.js"></script>
+</head>
+
+<body>
+
+  <div class="jumbotron text-center" style="padding: 30px;">
+    <h1>Competição de Carrinhos de Rolimã</h1>
+  </div>
+  
+      <div class="container p-3 badge-secondary text-light">
+        <div class="form-group">
+          <div class="row">
+            <div class="col-6">
+            <label for="competidor">Nome do competidor:</label>
+            <input type="text" name="competidor" id="competidor" value="" class="form-control"
+              placeholder="Nome Completo">
+          </div>
+        
+
+          <div class="col-6">
+            <label for="tempo">Tempo de prova:</label>
+            <input type="number" name="tempo" id="tempo" class="form-control" value=""
+              placeholder="Tempo de prova em segundos">
+          </div>
+        </div>
+        
+        </div>
+
+        
+        <div class="text-center" style="padding: 2%;">
+          <input type="button" class="btn btn-lg btn-dark " value="Inserir" id="Inserir" onclick="inserirCompetidor()">
+        </div>
+    </form>
+
+    <!--Tabela para inserção de competidores-->
+    <div class="container p-3 text-center">
+      <table id="dadosTabela" class="table table-striped table-dark table-hover table-bordered">
+        <thead>
+          <tr>
+            <th>Largada</th>
+            <th>Competidor</th>
+            <th>Tempo (segundos)</th>
+          </tr>
+        </thead>
+      </table>
+
+      <input type="button" class="btn btn-lg btn-dark " value="Resultados" id="Resultados"onclick="checarResultado()" disabled>
+    </div>
+
+
+    <!--Tabela com resultados da competição-->
+    <div class="container p3 text-center">
+      <table id="tabelaResultados"class="table table-striped table-dark table-hover table-bordered">
+        <thead>
+          <tr>
+            <th>Posição</th>
+            <th>Largada</th>
+            <th>Competidor</th>
+            <th>Tempo (segundos)</th>
+            <th>Resultado</th>
+          </tr>
+        </thead>
+      </table>
+
+      <input type="button" class="btn btn-lg btn-dark " value="Nova Apuração" id="Nova_apuracao" onclick="novaApuracao()" disabled>
+    </div>
+  </div>
+</body>
+
+</html>
