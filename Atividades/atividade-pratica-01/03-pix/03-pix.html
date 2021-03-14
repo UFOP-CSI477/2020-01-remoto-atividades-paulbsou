@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle de Pix</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+  <script src="./03-pix.js"></script>
+</head>
+
+
+<body onload="carregarBancos()">
+  <div class="jumbotron text-center" style="padding: 30px;">
+    <h1>Controle de PIX</h1>
+  </div>
+''
+  <form>
+    <div class="container p-3 badge-secondary text-light" style="padding: 20px;">
+
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">   
+      <label for="infochave">Selecione o tipo de chave pix: </label>
+          <select name="chaveTipo" class="form-control" id="chaveTipo">
+            <option value="">Selecione</option>
+            <option value="1">CPF</option>
+            <option value="2">CNPJ</option>
+            <option value="3">E-mail</option>
+            <option value="4">Telefone</option>
+          </select>
+      </div>
+      </div>
+
+      <div class="col-6">
+        <div class="form-group">  
+          <label for="chavepix">Informe a chave: </label>
+          <input type="text" name="chavepix" id="chavepix" value="" class="form-control">
+      </div>
+ </div>
+ </div>
+
+ 
+      
+        <div class="form-group"> 
+        <label>Informações:</label>
+        <select name="banco" id="banco" onchange="carregarBancos()" class="form-control">
+          <option value="">Selecione o banco: </option>
+        </select>
+      </div>
+
+    
+      <div class="row">
+        <div class="col-6">
+          <div class="form-group">   
+    <label for="op">Selecione o tipo de operação: </label>
+        <select name="op"  id="op" class="form-control">
+          <option value="">Selecione</option>
+          <option value="01-Envio">01 - Envio</option>
+          <option value="02-Recebimento">02 - Recebimento</option>
+        </select>
+    </div>
+    </div>
+
+    <div class="col-6">
+        <label for="valor">Informe o valor: </label>
+        <input type="text" name="valor" id="valor" value="" class = "form-control"placeholder="R$">
+    </div>
+      </div>
+
+      <div class="row">
+        <div class="col-6">
+    <div class="form-group">
+      <label for="data">Data: </label>
+      <input type="date" name="data" id="data" class="form-control">
+    </div>
+        </div>
+        </div>
+
+    
+    <div class="text-center">
+      <input type="button" class="btn btn-dark btn-lg" value="Inserir" onclick="inserir()">
+      <input type="button" class="btn btn-dark btn-lg" value="Finalizar" onclick="finalizar()">
+      <input type="reset" class="btn btn-dark btn-lg" value="Limpar" onclick="limpar()">
+    </div>
+     
+
+    <div class="container p-3 text-center">
+      <table id="tabela" class="table table-striped table-dark table-hover table-bordered">
+        <thead>
+          <tr>
+            <th>Operação</th>
+            <th>Valor</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+
+    <div class="container p-3 text-center">
+      <table id="SaldoFinal" class="table table-striped table-dark table-hover table-bordered">
+    <tbody>
+      <tr>
+        <td colspan="3">Saldo Final:</td>
+      </tr>
+    </tbody>
+
+  </form>
+</body>
+</html>
