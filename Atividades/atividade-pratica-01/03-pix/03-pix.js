@@ -151,29 +151,32 @@ function validarTipoChave() {
 
   function finalizar() {
 
-     let saldo = 0.0;
-     let saldoenvio = 0.0;
-     let saldorecebimento = 0.0;
+    let saldo = 0.0;
+    let saldoenvio = 0.0;
+    let saldorecebimento = 0.0;
 
-    for(cont = 0; cont < listaOperacao.length; cont++){
-      if(op.value == '01-Envio'){
-        saldoenvio -= parseFloat(listaOperacao[cont].valor);
-        
-      }else if (op.value == '02-Recebimento'){
-        saldorecebimento += parseFloat(listaOperacao[cont].valor);
-      
-      }
-    }
-  
-      saldo = saldor - saldoe;
+   for(cont = 0; cont < listaOperacao.length; cont++){
+     if(listaOperacao[cont].op == '01-Envio'){
+       saldoenvio += parseFloat(listaOperacao[cont].valor);
+       
+     }else if (listaOperacao[cont].op == '02-Recebimento'){
+       saldorecebimento += parseFloat(listaOperacao[cont].valor);
+     
+     }
+   }
 
-      var tabela = document.createElement('tr');
-      tabela.insertCell(0).innerHTML = saldo;
-      const sld = new Saldo(saldo);
-      listaOperacao.push(saldo);
-      console.log(listaOperacao);
-      document.getElementById('SaldoFinal').appendChild(tabela);
-    }
+     saldo = saldorecebimento - saldoenvio;
+     console.log(saldo);
+
+     var tabela = document.createElement('tr');
+     tabela.insertCell(0).innerHTML = saldo;
+     console.log(tabela);
+
+     const sld = new Saldo(saldo);
+     listaOperacao.push(sld);
+     console.log(listaOperacao);
+     document.getElementById('SaldoFinal').appendChild(tabela);
+ }
     
   function limpar() {
     location.reload();
