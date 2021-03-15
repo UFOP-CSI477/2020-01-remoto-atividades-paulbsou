@@ -55,9 +55,7 @@ function validarChavePix(campo) {
 }
 
 function validarTipoChave() {
-
   let chaveTipo = document.getElementById("chaveTipo");
-
       if (chaveTipo.value == "") {
         window.alert("Por favor, selecione o tipo de chave!");
         chaveTipo.focus();
@@ -69,9 +67,7 @@ function validarTipoChave() {
   }
 
   function validarBanco() {
-
     let banco = document.getElementById("banco");
-  
         if (banco.value == "") {
           window.alert("Por favor, selecione o banco!");
           banco.focus();
@@ -83,9 +79,7 @@ function validarTipoChave() {
     }
 
     function validarTipoOperacao() {
-
       let op = document.getElementById("op");
-    
           if (op.value == "") {
             window.alert("Por favor, selecione o tipo da operação!");
             op.focus();
