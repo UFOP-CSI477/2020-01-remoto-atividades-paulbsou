@@ -13,10 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 use App\Models\Produto;
+use App\Http\Controllers\ProdutoController;
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('principal');
+})->name('principal');
+
+Route::resource('/produtos', ProdutoController::class);
+
+/*
 
 Route::get
 ('/produtos', function(){
@@ -37,3 +42,4 @@ Route::get
     return view('produtos', ['dados' => $produto]);
 });
 
+ */
