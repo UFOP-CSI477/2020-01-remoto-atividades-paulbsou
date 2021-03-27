@@ -12,7 +12,28 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Models\Produto;
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get
+('/produtos', function(){
+    $produto = Produto::all();
+
+    return view('produtos', ['dados' => $produto]);
+});
+
+Route::get
+('/produtos/{id}', function($id){
+
+    $produto = Produto::findOrFail($id);
+
+    if($produto == null){
+        return 'ID inválido!';
+    }
+
+    return view('produtos', ['dados' => $produto]);
+});
+
