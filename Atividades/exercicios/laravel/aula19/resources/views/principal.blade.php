@@ -10,12 +10,21 @@
 </head>
 <body>
     <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-inverse">
+        <nav class="navbar navbar-inverse">
+         <div class="navbar-header">
 
             <ul class="nav">
                 <li class="nav-item"><a class="nav-link" href="{{route('produtos.index')}}" >Produtos</a></li>
             </ul>
         </nav>
+
+        @if(session('mensagem'))
+            <div class="alert allert-success">
+                {{session('mensagem')}}
+            </div>
+
+
+        @endif
 
         <!--Conteúdo da página//-->
         @yield('conteudo')
