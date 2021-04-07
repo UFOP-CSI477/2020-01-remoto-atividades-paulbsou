@@ -14,15 +14,11 @@
 
         <div class="form-group">
             <label for="estado_id">Estado</label>
-
             <select name="estado_id" id="estado_id" class="form-control">
-
             @foreach($estados as $e)
                 <option value="{{$e->id}}">{{$e->nome}}</option>
             @endforeach
-
             </select>
-
         </div>
 
         <div class="text-right">

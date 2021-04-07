@@ -5,10 +5,10 @@
     <form action="{{route('estados.store')}}" method="post">
 
     @csrf
-    
+
     <div class="form-group">
         <label for="nome">Nome</label>
-        <input type="text" class="form-control" name="nome" id="nome">
+        <input type="text" class="form-control" name="nome" id="nome" required>
     </div>
 
 
