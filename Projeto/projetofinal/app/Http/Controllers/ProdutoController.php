@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Produto;
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -99,7 +98,7 @@ class ProdutoController extends Controller
 
         session()->flash('mensagem', 'Produto atualizado!');
 
-        return redirect()->route('produtos.show');
+        return redirect()->route('produtos.index');
     }
 
     /**

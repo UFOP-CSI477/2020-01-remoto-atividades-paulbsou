@@ -98,17 +98,17 @@
                 @csrf
                 <div class="form-group">
                     <label for="nome" id="labelNome"><b>Nome</b> </label>
-                    <input type="text" name="nome" id="nome" class="form-control" required>
+                    <input type="text" name="nome" id="nome" class="form-control" placeholder="ex: Aurora Silva" required>
                 </div>
 
                 <div class="form-group">
                     <label for="email" id="labelEmail"><b> E-mail:</b> </label><br>
-                    <input type="text" name="email" id="email" class="form-control" required>
+                    <input type="text" name="email" id="email" class="form-control" placeholder="ex: aurora@gmail.com"required>
                 </div>
 
                 <div class="form-group">
                     <label for="whatsapp" id="labelWhatsapp"> <b>WhatsApp:</b> </label>
-                    <input type="text" name="whatsapp" id="whatsapp" class="form-control" required>
+                    <input type="text" name="whatsapp" id="whatsapp" placeholder="(99)9999-9999"class="form-control" required>
                 </div>
 
                 <div class="form-group">

@@ -37,13 +37,12 @@ Route::name('portfolio.')->prefix('portfolio')->group(function () {
 Route::name('produtos.')->prefix('produto')->group(function () {
     Route::get('/loja', [ProdutoController::class, 'loja'])->name('inicio');
     Route::get('/finalizar', [ProdutoController::class, 'ensaios'])->name('ensaios');
-    //Route::get('/workshop', [ProdutoController::class, 'workshop'])->name('workshop');
     Route::get('/', [ProdutoController::class, 'index'])->name('index');
     Route::get('/cadastrar', [ProdutoController::class, 'create'])->name('create');
     Route::post('/armazenar', [ProdutoController::class, 'store'])->name('store');
      Route::get('/exibir', [ProdutoController::class, 'show'])->name('show');
-     Route::get('/editar', [ProdutoController::class, 'edit'])->name('edit');
-     Route::delete('/excluir', [ProdutoController::class, 'destroy'])->name('destroy');
+     Route::get('/editar/{produto}', [ProdutoController::class, 'edit'])->name('edit');
+     Route::delete('/excluir/{produto}', [ProdutoController::class, 'destroy'])->name('destroy');
      Route::put('/atualizar', [ProdutoController::class, 'update'])->name('update');
 });
 
