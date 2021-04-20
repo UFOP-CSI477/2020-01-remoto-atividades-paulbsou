@@ -10,22 +10,18 @@
 
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <title>Sistema de Manutenção de Equipamentos</title>
 
-    <title>JuStella Fotografia</title>
-</head>
+    </head>
 
-<body>
-
+    <body>
     <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
-        <a class="navbar-brand logo" href="{{route('cliente.inicio')}}"><img src="{{asset('imagens/LogoJuStella1.png')}}" alt="Logomarca JuStella" width="100">
+        <a class="navbar-brand logo" href="/"><img src="{{asset('imagens/Computer.png')}}" alt="Manutenção de Equipamentos" width="25">
         </a>
 
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="{{route('cliente.inicio')}}">Início</a></li>
-        <li class="nav-item"><a class="nav-link" href="{{route('portfolio.inicio')}}">Portfólio</a></li>
-        <li class="nav-item"><a class="nav-link" href="{{route('produtos.show')}}">Loja</a></li>
-        <li class="nav-item"><a class="nav-link" href="{{route('cliente.inicio')}}#formcliente">Fale Conosco</a></li>
+        <ul class="navbar-nav navbar-right">
+        <li class="nav-item"><a class="nav-link" href="/">Manutenção de Equipamentos</a></li>
+
 
 
     @guest
@@ -45,21 +41,11 @@
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                     {{ Auth::user()->name }}
                 </a>
+                
 
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
-                <!------------------------------------------------------------------------------>
-        @if(Auth::check())
-            @if(Auth::user()->id==1)
-                <a class="dropdown-item" href="{{ route('produtos.index') }}">Cadastro de Produto</a>
-                <a class="dropdown-item" href="{{ route('cliente.show') }}">Formulário de Contato</a>
-                <a class="dropdown-item" href="{{ route('pedidos.show') }}">Relatório de Compras</a>
-            @endif
-        @endif
-
-
-
-        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
             document.getElementById('logout-form').submit();">
             {{ __('Logout') }}
         </a>
@@ -81,7 +67,6 @@
         @endif
 
   @yield('conteudo')
-
 
     </div>
 </body>
